@@ -1,0 +1,431 @@
+/* Hero Slider Styles */
+.heroSlider {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: #03090d;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide1 {
+  background-image: url("/images/slider/1.jpg");
+}
+
+.slide2 {
+  background-image: url("/images/slider/2.jpg");
+}
+
+.slide3 {
+  background-image: url("/images/slider/3.jpg");
+}
+
+.slide4 {
+  background-image: url("/images/slider/4.jpg");
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.slide.animating {
+  transition: all 1s ease-in-out;
+}
+
+.slideOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 9, 13, 0.4) 0%,
+    rgba(3, 9, 13, 0.8) 100%
+  );
+  z-index: 3;
+}
+
+.slideContent {
+  position: relative;
+  z-index: 4;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.textContent {
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.slideTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin: 0 0 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  display: block;
+  color: #626369;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.mainTitle {
+  display: block;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.ctaWrapper {
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s ease-out 0.5s forwards;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #5be592;
+  color: #2b734a;
+  text-decoration: none;
+  padding: 18px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 20px rgba(91, 229, 146, 0.3);
+}
+
+.ctaButton:hover {
+  background: #ffffff;
+  color: #2b734a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+.ctaButton i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover i {
+  transform: translateX(5px);
+}
+
+/* Navigation */
+.navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.navButton:hover {
+  background: rgba(91, 229, 146, 0.8);
+  border-color: #5be592;
+  color: #2b734a;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prevButton {
+  left: 30px;
+}
+
+.nextButton {
+  right: 30px;
+}
+
+/* Pagination */
+.pagination {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.paginationDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.paginationDot.active {
+  background: #5be592;
+  border-color: #5be592;
+  transform: scale(1.2);
+}
+
+.paginationDot:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.paginationDot:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scrollText {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.scrollLine {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7) 0%,
+    transparent 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollLine::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5be592;
+  animation: scrollLineMove 2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollLineMove {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroSlider {
+    height: 100vh;
+    min-height: 500px;
+  }
+
+  .slideTitle {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .ctaButton {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+
+  .navButton {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .prevButton {
+    left: 20px;
+  }
+
+  .nextButton {
+    right: 20px;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+
+  .pagination {
+    bottom: 30px;
+  }
+
+  .paginationDot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .navButton {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .prevButton {
+    left: 15px;
+  }
+
+  .nextButton {
+    right: 15px;
+  }
+
+  .ctaWrapper {
+    margin-top: 30px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .slideOverlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+
+  .navButton {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: #ffffff;
+  }
+
+  .paginationDot {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    transition: opacity 0.3s ease;
+  }
+
+  .ctaWrapper {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .scrollLine::after {
+    animation: none;
+  }
+}

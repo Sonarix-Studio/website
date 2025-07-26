@@ -1,0 +1,500 @@
+/* Company Services Styles */
+
+/* About Section */
+.aboutSection {
+  padding: 120px 0;
+  position: relative;
+  background: linear-gradient(135deg, #1a1d23 0%, #0e1419 100%);
+}
+
+.aboutBackground {
+  position: relative;
+  background-image: url("/images/normal/service_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.aboutBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 29, 35, 0.9) 0%,
+    rgba(14, 20, 25, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutContent {
+  position: relative;
+  z-index: 2;
+}
+
+.aboutHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #ffffff;
+  margin: 0 0 30px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.sectionTitle.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titleDivider {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.8s ease 0.2s;
+}
+
+.titleDivider.animate {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.dividerLine {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #5be592 0%, #00da97 100%);
+  border-radius: 2px;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.aboutText {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease 0.3s;
+}
+
+.aboutText.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.aboutTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: #ffffff;
+  margin: 0 0 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.aboutSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: #5be592;
+  margin: 0 0 30px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.aboutDescription {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin: 0 0 40px;
+  font-size: 16px;
+}
+
+.aboutCta {
+  margin-top: 40px;
+}
+
+.aboutButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #5be592 0%, #00da97 100%);
+  color: #2b734a;
+  text-decoration: none;
+  padding: 18px 35px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(91, 229, 146, 0.3);
+}
+
+.aboutButton:hover {
+  background: #ffffff;
+  color: #2b734a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+.aboutButton i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.aboutButton:hover i {
+  transform: translateX(5px);
+}
+
+.aboutImage {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.4s;
+}
+
+.aboutImage.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.teamImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(91, 229, 146, 0.8) 0%,
+    rgba(0, 218, 151, 0.8) 100%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.imageContainer:hover .imageOverlay {
+  opacity: 1;
+}
+
+.imageContainer:hover .teamImage {
+  transform: scale(1.05);
+}
+
+.playButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.1s;
+}
+
+.imageContainer:hover .playButtonWrapper {
+  transform: translateY(0);
+}
+
+.playButton {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #2b734a;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playButton:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+.playText {
+  color: #2b734a;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 120px 0;
+  background: #03090d;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.serviceCard {
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.serviceCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(91, 229, 146, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.serviceIcon {
+  margin-bottom: 30px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.iconImage {
+  width: 80px;
+  height: 80px;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .iconImage {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(56%) saturate(345%)
+    hue-rotate(93deg) brightness(98%) contrast(89%);
+}
+
+.serviceContent {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.serviceDescription {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0 0 30px;
+  font-size: 14px;
+}
+
+.serviceButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5be592;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.serviceButton:hover {
+  color: #ffffff;
+  border-bottom-color: #5be592;
+  gap: 12px;
+}
+
+.serviceButton i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.serviceButton:hover i {
+  transform: translateX(3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation delays for staggered effect */
+.serviceCard:nth-child(1) {
+  animation-delay: 0s;
+}
+.serviceCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.serviceCard:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutSection,
+  .servicesSection {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .aboutHeader {
+    margin-bottom: 60px;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .aboutText {
+    text-align: center;
+    transform: translateY(-30px);
+  }
+
+  .aboutText.animate {
+    transform: translateY(0);
+  }
+
+  .aboutImage {
+    transform: translateY(30px);
+  }
+
+  .aboutImage.animate {
+    transform: translateY(0);
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .serviceCard {
+    padding: 30px 20px;
+  }
+
+  .aboutBackground {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutGrid {
+    gap: 40px;
+  }
+
+  .serviceCard {
+    padding: 25px 15px;
+  }
+
+  .serviceContent {
+    max-width: 100%;
+  }
+
+  .aboutButton {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .serviceCard {
+    border-color: #ffffff;
+  }
+
+  .aboutButton {
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .serviceCard,
+  .sectionTitle,
+  .titleDivider,
+  .aboutText,
+  .aboutImage {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .serviceCard:hover,
+  .imageContainer:hover .teamImage {
+    transform: none;
+  }
+
+  .aboutBackground {
+    background-attachment: scroll;
+  }
+}
+
+/* Service animation delays */
+.service1 {
+  animation-delay: 0s;
+}
+.service2 {
+  animation-delay: 0.2s;
+}
+.service3 {
+  animation-delay: 0.4s;
+}
+.service4 {
+  animation-delay: 0.6s;
+}

@@ -1,0 +1,154 @@
+"use client";
+
+import React, { useState, useEffect, useCallback } from "react";
+import styles from "./HeroSlider.module.css";
+
+interface Slide {
+  id: number;
+  title: string;
+  subtitle: string;
+  backgroundImage: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const HeroSlider: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const slides: Slide[] = [
+    {
+      id: 1,
+      title: "creative gameplay and stories",
+      subtitle: "We Develop Games with",
+      backgroundImage: "/images/slider/1.jpg",
+      ctaText: "Explore Our Games",
+      ctaLink: "/our-games",
+    },
+    {
+      id: 2,
+      title: "for the universe in the all-new Star Gazer",
+      subtitle: "Become the last hope",
+      backgroundImage: "/images/slider/2.jpg",
+      ctaText: "Play Now",
+      ctaLink: "/games/star-gazer",
+    },
+  ];
+
+  const nextSlide = useCallback(() => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setTimeout(() => setIsAnimating(false), 1000);
+  }, [isAnimating, slides.length]);
+
+  const prevSlide = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setTimeout(() => setIsAnimating(false), 1000);
+  };
+
+  const goToSlide = (index: number) => {
+    if (isAnimating || index === currentSlide) return;
+    setIsAnimating(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsAnimating(false), 1000);
+  };
+
+  // Auto-play functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
+  return (
+    <section className={styles.heroSlider}>
+      <div className={styles.sliderContainer}>
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`${styles.slide} ${
+              index === currentSlide ? styles.active : ""
+            } ${isAnimating ? styles.animating : ""} ${
+              styles[`slide${index + 1}`]
+            }`}
+          >
+            <div className={styles.slideOverlay}></div>
+            <div className={styles.slideContent}>
+              <div className={styles.container}>
+                <div className={styles.contentWrapper}>
+                  <div className={styles.textContent}>
+                    <h1 className={styles.slideTitle}>
+                      <span className={styles.subtitle}>{slide.subtitle}</span>
+                      <span className={styles.mainTitle}>{slide.title}</span>
+                    </h1>
+                    {slide.ctaText && slide.ctaLink && (
+                      <div className={styles.ctaWrapper}>
+                        <a href={slide.ctaLink} className={styles.ctaButton}>
+                          {slide.ctaText}
+                          <i className="fas fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Arrows */}
+      <div className={styles.navigation}>
+        <button
+          className={`${styles.navButton} ${styles.prevButton}`}
+          onClick={prevSlide}
+          disabled={isAnimating}
+          title="Previous slide"
+          aria-label="Previous slide"
+        >
+          <i className="fas fa-chevron-left"></i>
+        </button>
+        <button
+          className={`${styles.navButton} ${styles.nextButton}`}
+          onClick={nextSlide}
+          disabled={isAnimating}
+          title="Next slide"
+          aria-label="Next slide"
+        >
+          <i className="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      {/* Pagination Dots */}
+      <div className={styles.pagination}>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`${styles.paginationDot} ${
+              index === currentSlide ? styles.active : ""
+            }`}
+            onClick={() => goToSlide(index)}
+            disabled={isAnimating}
+            title={`Go to slide ${index + 1}`}
+            aria-label={`Go to slide ${index + 1}`}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className={styles.scrollIndicator}>
+        <div className={styles.scrollText}>Scroll</div>
+        <div className={styles.scrollLine}></div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSlider;
