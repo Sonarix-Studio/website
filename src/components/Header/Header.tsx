@@ -16,21 +16,21 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems: MenuItem[] = [
-    { title: "Home", href: "/" },
-    { title: "Our Games", href: "/our-games" },
-    { title: "Our Studio", href: "/our-studio" },
-    {
-      title: "Shop",
-      href: "/shop",
-      submenu: [
-        { title: "Home V2", href: "/home-v2" },
-        { title: "My Account", href: "/my-account" },
-        { title: "Cart", href: "/cart" },
-        { title: "Checkout", href: "/checkout" },
-      ],
-    },
-    { title: "Blog", href: "/blog" },
-    { title: "Contact", href: "/contact" },
+    { title: "Home", href: "/#" },
+    { title: "Our Games", href: "/#" },
+    { title: "Our Studio", href: "/#" },
+    // {
+    //   title: "Shop",
+    //   href: "/shop",
+    //   submenu: [
+    //     { title: "Home V2", href: "/home-v2" },
+    //     { title: "My Account", href: "/my-account" },
+    //     { title: "Cart", href: "/cart" },
+    //     { title: "Checkout", href: "/checkout" },
+    //   ],
+    // },
+    // { title: "Blog", href: "/blog" },
+    { title: "Contact", href: "/#" },
   ];
 
   const socialLinks = [
