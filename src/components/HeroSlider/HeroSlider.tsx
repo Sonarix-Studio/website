@@ -68,7 +68,7 @@ const HeroSlider: React.FC = () => {
   }, [nextSlide]);
 
   return (
-    <section className={styles.heroSlider}>
+    <section className={styles.heroSlider} id="hero-slider">
       <div className={styles.sliderContainer}>
         {slides.map((slide, index) => (
           <div

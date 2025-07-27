@@ -118,7 +118,7 @@ const LatestReleases: React.FC = () => {
   const displayedGames = filteredGames.slice(0, visibleGames);
 
   return (
-    <section className={styles.latestReleases} ref={ref}>
+    <section className={styles.latestReleases} ref={ref} id="latest-releases">
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <h2

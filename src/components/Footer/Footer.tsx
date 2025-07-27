@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       {/* Newsletter Section */}
       <section className={styles.newsletterSection}>
         <div className={styles.container}>

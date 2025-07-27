@@ -16,9 +16,9 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems: MenuItem[] = [
-    { title: "Home", href: "/#" },
-    { title: "Our Games", href: "/#" },
-    { title: "Our Studio", href: "/#" },
+    { title: "Home", href: "/#header" },
+    { title: "Our Games", href: "/#latest-releases" },
+    { title: "Our Studio", href: "/#company-about" },
     // {
     //   title: "Shop",
     //   href: "/shop",
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     //   ],
     // },
     // { title: "Blog", href: "/blog" },
-    { title: "Contact", href: "/#" },
+    { title: "Contact", href: "/#footer" },
   ];
 
   const socialLinks = [
@@ -67,6 +67,7 @@ const Header: React.FC = () => {
 
       <header
         className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
+        id="header"
       >
         <div className={styles.container}>
           <div className={styles.headerContent}>

@@ -55,7 +55,11 @@ const CompanyServices: React.FC = () => {
   return (
     <>
       {/* About Section */}
-      <section className={styles.aboutSection} ref={aboutRef}>
+      <section
+        className={styles.aboutSection}
+        ref={aboutRef}
+        id="company-about"
+      >
         <div className={styles.aboutBackground}>
           <div className={styles.container}>
             <div className={styles.aboutContent}>
