@@ -83,7 +83,7 @@ export default function RootLayout({
       <body
         className={`${kodchasan.variable} ${mina.variable} ${share.variable}`}
       >
-        {children}
+        <div className="gaming-layout">{children}</div>
       </body>
     </html>
   );
