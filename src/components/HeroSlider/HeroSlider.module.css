@@ -28,7 +28,7 @@
   z-index: 1;
 }
 
-.slide1 {
+/* .slide1 {
   background-image: url("/images/slider/1.jpg");
 }
 
@@ -42,7 +42,7 @@
 
 .slide4 {
   background-image: url("/images/slider/4.jpg");
-}
+} */
 
 .slide.active {
   opacity: 1;

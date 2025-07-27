@@ -21,7 +21,8 @@ const HeroSlider: React.FC = () => {
       id: 1,
       title: "creative gameplay and stories",
       subtitle: "We Develop Games with",
-      backgroundImage: "/images/slider/1.jpg",
+      backgroundImage:
+        "/images/hero/arun-clarke-UDEb05r0Uy8-unsplash-800x500.jpg",
       ctaText: "Explore Our Games",
       ctaLink: "/our-games",
     },
@@ -29,7 +30,8 @@ const HeroSlider: React.FC = () => {
       id: 2,
       title: "for the universe in the all-new Star Gazer",
       subtitle: "Become the last hope",
-      backgroundImage: "/images/slider/2.jpg",
+      backgroundImage:
+        "/images/hero/hizir-kaya-0q90Mumo-xE-unsplash-1-800x500.jpg",
       ctaText: "Play Now",
       ctaLink: "/games/star-gazer",
     },
@@ -76,6 +78,7 @@ const HeroSlider: React.FC = () => {
             } ${isAnimating ? styles.animating : ""} ${
               styles[`slide${index + 1}`]
             }`}
+            style={{ backgroundImage: `url(${slide.backgroundImage})` }}
           >
             <div className={styles.slideOverlay}></div>
             <div className={styles.slideContent}>
