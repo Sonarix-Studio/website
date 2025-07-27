@@ -17,20 +17,9 @@ const Header: React.FC = () => {
 
   const menuItems: MenuItem[] = [
     { title: "Home", href: "/#header" },
-    { title: "Our Games", href: "/#latest-releases" },
+    { title: "Our Games", href: "/#portfolio" },
     { title: "Our Studio", href: "/#company-about" },
-    // {
-    //   title: "Shop",
-    //   href: "/shop",
-    //   submenu: [
-    //     { title: "Home V2", href: "/home-v2" },
-    //     { title: "My Account", href: "/my-account" },
-    //     { title: "Cart", href: "/cart" },
-    //     { title: "Checkout", href: "/checkout" },
-    //   ],
-    // },
-    // { title: "Blog", href: "/blog" },
-    { title: "Contact", href: "/#footer" },
+    { title: "Contact", href: "/#contact" },
   ];
 
   const socialLinks = [

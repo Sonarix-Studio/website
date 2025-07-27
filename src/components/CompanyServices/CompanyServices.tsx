@@ -28,26 +28,34 @@ const CompanyServices: React.FC = () => {
   const services: Service[] = [
     {
       id: 1,
-      title: "Design & Strategy",
+      title: "Custom Game Development",
       description:
-        "Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek.",
+        "Unity 2D/3D, mobile, PC, WebGL - Genres: Casual, Puzzle, Racing, AR, Multiplayer",
       icon: "/icons/expert-advisor.svg",
       link: "/our-studio",
     },
     {
       id: 2,
-      title: "VR Development",
+      title: "XR Solutions",
       description:
-        "Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek.",
+        "Apple Vision Pro, Meta Quest, ARKit/ARCore - Immersive experiences for next-gen platforms",
       icon: "/icons/market-research.svg",
       link: "/our-studio",
     },
     {
       id: 3,
-      title: "Marketing & PR",
+      title: "Unity Tools & AI Plugins",
       description:
-        "Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek.",
+        "Unity Editor extensions, in-house automation tools - Streamline your development workflow",
       icon: "/icons/customer-insights.svg",
+      link: "/our-studio",
+    },
+    {
+      id: 4,
+      title: "Web3 / Blockchain Integration",
+      description:
+        "NFT gaming, on-chain logic - Future-ready blockchain solutions for gaming",
+      icon: "/icons/expert-advisor.svg",
       link: "/our-studio",
     },
   ];
@@ -87,18 +95,20 @@ const CompanyServices: React.FC = () => {
                   }`}
                 >
                   <h3 className={styles.aboutTitle}>
-                    Games for those that aren&apos;t &apos;Gamers&apos;
+                    Invest in the future of AI-integrated, XR-powered game
+                    development.
                   </h3>
                   <h5 className={styles.aboutSubtitle}>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic life.
+                    Sonarix Studio combines cutting-edge technology with
+                    creative excellence to deliver next-generation gaming
+                    experiences.
                   </h5>
                   <p className={styles.aboutDescription}>
-                    When she reached the first hills of the Italic Mountains,
-                    she had a last view back on the skyline of her hometown
-                    Bookmarksgrove, the headline of Alphabet Village and the
-                    subline of her own road, the Line Lane. Pityful a rethoric
-                    question ran over her cheek.
+                    We specialize in Unity-based solutions, artificial
+                    intelligence integration, and immersive XR applications. Our
+                    team creates engaging digital experiences that push the
+                    boundaries of what&apos;s possible in gaming and interactive
+                    media.
                   </p>
                   <div className={styles.aboutCta}>
                     <Link href="/our-studio" className={styles.aboutButton}>

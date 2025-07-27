@@ -82,55 +82,6 @@ const Footer: React.FC = () => {
 
   return (
     <footer className={styles.footer} id="footer">
-      {/* Newsletter Section */}
-      <section className={styles.newsletterSection}>
-        <div className={styles.container}>
-          <div className={styles.newsletterContent}>
-            <div className={styles.newsletterText}>
-              <h2 className={styles.newsletterTitle}>Our Newsletter</h2>
-              <div className={styles.titleDivider}>
-                <span className={styles.dividerLine}></span>
-              </div>
-              <p className={styles.newsletterDescription}>
-                Sign up for our e-mail newsletter and stay informed for
-                what&apos;s next on the horizon.
-              </p>
-            </div>
-            <div className={styles.newsletterForm}>
-              <form
-                onSubmit={handleNewsletterSubmit}
-                className={styles.subscribeForm}
-              >
-                <div className={styles.inputGroup}>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your email address"
-                    className={styles.emailInput}
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className={styles.subscribeButton}
-                    disabled={isSubscribing}
-                  >
-                    {isSubscribing ? (
-                      <span className={styles.loading}>
-                        <i className="fas fa-spinner fa-spin"></i>
-                        Signing up...
-                      </span>
-                    ) : (
-                      "Sign up"
-                    )}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Footer */}
       <section className={styles.mainFooter}>
         <div className={styles.container}>

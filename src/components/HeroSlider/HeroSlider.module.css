@@ -28,6 +28,12 @@
   z-index: 1;
 }
 
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
 /* .slide1 {
   background-image: url("/images/slider/1.jpg");
 }
@@ -70,7 +76,7 @@
 
 .slideContent {
   position: relative;
-  z-index: 4;
+  z-index: 5;
   height: 100%;
   display: flex;
   align-items: center;
@@ -124,6 +130,12 @@
   opacity: 0;
   transform: translateY(30px);
   animation: slideUp 1s ease-out 0.5s forwards;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .ctaButton {
@@ -141,6 +153,8 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   box-shadow: 0 5px 20px rgba(91, 229, 146, 0.3);
+  position: relative;
+  z-index: 11;
 }
 
 .ctaButton:hover {
@@ -159,13 +173,28 @@
   transform: translateX(5px);
 }
 
+.secondaryButton {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #5be592;
+  box-shadow: 0 5px 20px rgba(91, 229, 146, 0.2);
+}
+
+.secondaryButton:hover {
+  background: #5be592;
+  color: #2b734a;
+  border-color: #5be592;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(91, 229, 146, 0.4);
+}
+
 /* Navigation */
 .navigation {
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 15;
   pointer-events: none;
 }
 
@@ -218,7 +247,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 15px;
-  z-index: 10;
+  z-index: 15;
 }
 
 .paginationDot {
@@ -259,7 +288,7 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  z-index: 10;
+  z-index: 15;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -338,6 +367,12 @@
   .ctaButton {
     padding: 15px 25px;
     font-size: 14px;
+  }
+
+  .ctaWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .navButton {

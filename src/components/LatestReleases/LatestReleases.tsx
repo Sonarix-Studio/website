@@ -118,13 +118,13 @@ const LatestReleases: React.FC = () => {
   const displayedGames = filteredGames.slice(0, visibleGames);
 
   return (
-    <section className={styles.latestReleases} ref={ref} id="latest-releases">
+    <section className={styles.latestReleases} ref={ref} id="portfolio">
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <h2
             className={`${styles.sectionTitle} ${inView ? styles.animate : ""}`}
           >
-            Latest Releases
+            Portfolio
           </h2>
           <div
             className={`${styles.titleDivider} ${inView ? styles.animate : ""}`}

@@ -10,6 +10,8 @@ interface Slide {
   backgroundImage: string;
   ctaText?: string;
   ctaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
 }
 
 const HeroSlider: React.FC = () => {
@@ -19,21 +21,39 @@ const HeroSlider: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      title: "creative gameplay and stories",
-      subtitle: "We Develop Games with",
+      title:
+        "We build immersive worlds, smart tools, and XR experiences that drive impact.",
+      subtitle: "",
       backgroundImage:
         "/images/hero/arun-clarke-UDEb05r0Uy8-unsplash-800x500.jpg",
-      ctaText: "Explore Our Games",
-      ctaLink: "/our-games",
+      ctaText: "Start Your Project",
+      ctaLink: "/#contact",
+      secondaryCtaText: "Explore Our Work",
+      secondaryCtaLink: "/#portfolio",
     },
     {
       id: 2,
-      title: "for the universe in the all-new Star Gazer",
-      subtitle: "Become the last hope",
+      title:
+        "Innovative game development with cutting-edge technology and creative storytelling.",
+      subtitle: "Game Development",
       backgroundImage:
         "/images/hero/hizir-kaya-0q90Mumo-xE-unsplash-1-800x500.jpg",
-      ctaText: "Play Now",
-      ctaLink: "/games/star-gazer",
+      ctaText: "View Our Games",
+      ctaLink: "/our-games",
+      secondaryCtaText: "Learn More",
+      secondaryCtaLink: "/#about",
+    },
+    {
+      id: 3,
+      title:
+        "Transform your ideas into reality with our expert development team.",
+      subtitle: "Custom Solutions",
+      backgroundImage:
+        "/images/hero/rodrigo-rodriguez-x7bbQIY6H04-unsplash-800x500.jpg",
+      ctaText: "Get Started",
+      ctaLink: "/#contact",
+      secondaryCtaText: "Our Services",
+      secondaryCtaLink: "/#services",
     },
   ];
 
@@ -86,17 +106,30 @@ const HeroSlider: React.FC = () => {
                 <div className={styles.contentWrapper}>
                   <div className={styles.textContent}>
                     <h1 className={styles.slideTitle}>
-                      <span className={styles.subtitle}>{slide.subtitle}</span>
+                      {slide.subtitle && (
+                        <span className={styles.subtitle}>
+                          {slide.subtitle}
+                        </span>
+                      )}
                       <span className={styles.mainTitle}>{slide.title}</span>
                     </h1>
-                    {slide.ctaText && slide.ctaLink && (
-                      <div className={styles.ctaWrapper}>
+                    <div className={styles.ctaWrapper}>
+                      {slide.ctaText && slide.ctaLink && (
                         <a href={slide.ctaLink} className={styles.ctaButton}>
                           {slide.ctaText}
                           <i className="fas fa-arrow-right"></i>
                         </a>
-                      </div>
-                    )}
+                      )}
+                      {slide.secondaryCtaText && slide.secondaryCtaLink && (
+                        <a
+                          href={slide.secondaryCtaLink}
+                          className={`${styles.ctaButton} ${styles.secondaryButton}`}
+                        >
+                          {slide.secondaryCtaText}
+                          <i className="fas fa-arrow-right"></i>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
