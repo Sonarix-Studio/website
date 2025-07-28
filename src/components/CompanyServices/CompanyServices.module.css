@@ -299,12 +299,13 @@
 }
 
 .iconImage {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   /* height: 80px; */
-  aspect-ratio: 1/0.8;
+  aspect-ratio: 1/1;
   /* filter: brightness(0) invert(1); */
   transition: all 0.3s ease;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 
 .serviceCard:hover .iconImage {

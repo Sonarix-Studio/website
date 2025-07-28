@@ -31,7 +31,7 @@ const CompanyServices: React.FC = () => {
       title: "CEO",
       description:
         "Great games aren't just built with code — they're crafted with curiosity, courage, and care.",
-      icon: "/icons/expert-advisor.svg",
+      icon: "/images/team/1671728375874.jpeg",
       link: "/#company-about",
     },
     {

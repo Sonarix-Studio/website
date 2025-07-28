@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import ImageSlider from "./ImageSlider";
 import styles from "./LatestReleases.module.css";
 
 interface Game {
@@ -12,7 +12,7 @@ interface Game {
   category: string;
   categorySlug: string;
   excerpt: string;
-  image: string;
+  images: string[];
   link: string;
   featured?: boolean;
 }
@@ -21,6 +21,7 @@ const LatestReleases: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [visibleGames, setVisibleGames] = useState(6);
   const [filteredGames, setFilteredGames] = useState<Game[]>([]);
+  const [hoveredGameId, setHoveredGameId] = useState<number | null>(null);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -36,7 +37,11 @@ const LatestReleases: React.FC = () => {
         categorySlug: "fps",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/porfolio/DemonPingPong/maxresdefault.jpg",
+        images: [
+          "/images/porfolio/DemonPingPong/maxresdefault.jpg",
+          "/images/porfolio/DemonPingPong/maxresdefault (1).jpg",
+          "/images/porfolio/DemonPingPong/unnamed.webp",
+        ],
         link: "/#portfolio",
         featured: true,
       },
@@ -47,7 +52,7 @@ const LatestReleases: React.FC = () => {
         categorySlug: "adventure",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/porfolio/EndlessWorld/DroneRacing.png",
+        images: ["/images/porfolio/EndlessWorld/DroneRacing.png"],
         link: "/#portfolio",
       },
       {
@@ -57,7 +62,15 @@ const LatestReleases: React.FC = () => {
         categorySlug: "fps",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/porfolio/FlowerShooter/banner_wide.jpg",
+        images: [
+          "/images/porfolio/FlowerShooter/banner_wide.jpg",
+          "/images/porfolio/FlowerShooter/banner.jpg",
+          "/images/porfolio/FlowerShooter/vlcsnap-2025-03-16-09h37m07s259.png",
+          "/images/porfolio/FlowerShooter/vlcsnap-2025-03-16-09h37m21s154.png",
+          "/images/porfolio/FlowerShooter/vlcsnap-2025-03-16-09h40m19s809.png",
+          "/images/porfolio/FlowerShooter/vlcsnap-2025-03-16-09h40m28s027.png",
+          "/images/porfolio/FlowerShooter/vlcsnap-2025-03-16-09h40m45s958.png",
+        ],
         link: "/#portfolio",
         featured: true,
       },
@@ -68,7 +81,10 @@ const LatestReleases: React.FC = () => {
         categorySlug: "adventure",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/porfolio/Rove/rove.jpg",
+        images: [
+          "/images/porfolio/Rove/rove.jpg",
+          "/images/porfolio/Rove/O5CgnFFaZoT0d5lLFs7aiL9pZr92-6g93qnx.avif",
+        ],
         link: "/#portfolio",
       },
       {
@@ -78,8 +94,14 @@ const LatestReleases: React.FC = () => {
         categorySlug: "platformer",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image:
+        images: [
           "/images/porfolio/SatanDefeat/75b7bf2601a030dd10d351108769c5ae.jpg",
+          "/images/porfolio/SatanDefeat/0809a4f442efd7fc1cbbfe9546ccaca5.jpg",
+          "/images/porfolio/SatanDefeat/4af691f6ad82a5538425782ee736c8af.png",
+          "/images/porfolio/SatanDefeat/71563544211e7b4534a7b188188dc765.jpg",
+          "/images/porfolio/SatanDefeat/83e4925aa17a6043b144a96c4c13023a.jpg",
+          "/images/porfolio/SatanDefeat/965b181d3913b7f4559647bac66c3823.jpg",
+        ],
         link: "/#portfolio",
       },
     ],
@@ -149,27 +171,30 @@ const LatestReleases: React.FC = () => {
               className={`${styles.gameCard} ${
                 game.featured ? styles.featured : ""
               } ${styles[`card${index + 1}`]}`}
+              onMouseEnter={() => setHoveredGameId(game.id)}
+              onMouseLeave={() => setHoveredGameId(null)}
             >
               <div className={styles.gameImageContainer}>
-                <Image
-                  src={game.image}
-                  alt={game.title}
-                  width={800}
-                  height={500}
-                  className={styles.gameImage}
-                />
-                <div className={styles.imageOverlay}>
-                  <div className={styles.overlayContent}>
-                    <Link href={game.link} className={styles.playButton}>
-                      <i className="fas fa-play"></i>
-                      <span>Play Now</span>
+                <div className={styles.imageSlider}>
+                  <ImageSlider
+                    images={game.images}
+                    gameTitle={game.title}
+                    rotationInterval={1000}
+                    isHovered={hoveredGameId === game.id}
+                  />
+                  <div className={styles.imageOverlay}>
+                    <div className={styles.overlayContent}>
+                      <Link href={game.link} className={styles.playButton}>
+                        <i className="fas fa-play"></i>
+                        <span>Play Now</span>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className={styles.categoryBadge}>
+                    <Link href={`/category/${game.categorySlug}`}>
+                      {game.category}
                     </Link>
                   </div>
-                </div>
-                <div className={styles.categoryBadge}>
-                  <Link href={`/category/${game.categorySlug}`}>
-                    {game.category}
-                  </Link>
                 </div>
               </div>
 
