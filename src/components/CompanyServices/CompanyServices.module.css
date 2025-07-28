@@ -299,15 +299,17 @@
 }
 
 .iconImage {
-  width: 80px;
-  height: 80px;
-  filter: brightness(0) invert(1);
+  width: 100%;
+  /* height: 80px; */
+  aspect-ratio: 1/0.8;
+  /* filter: brightness(0) invert(1); */
   transition: all 0.3s ease;
+  border-radius: 12px;
 }
 
 .serviceCard:hover .iconImage {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(56%) saturate(345%)
-    hue-rotate(93deg) brightness(98%) contrast(89%);
+  /* filter: brightness(0) saturate(100%) invert(72%) sepia(56%) saturate(345%)
+    hue-rotate(93deg) brightness(98%) contrast(89%); */
 }
 
 .serviceContent {

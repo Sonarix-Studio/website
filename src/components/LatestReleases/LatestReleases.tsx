@@ -31,65 +31,56 @@ const LatestReleases: React.FC = () => {
     () => [
       {
         id: 1,
-        title: "Rainbow Seven",
+        title: "Demon Ping Pong",
         category: "FPS",
         categorySlug: "fps",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/case/1.jpg",
-        link: "/games/rainbow-seven",
+        image: "/images/porfolio/DemonPingPong/maxresdefault.jpg",
+        link: "/#portfolio",
         featured: true,
       },
       {
         id: 2,
-        title: "Racing Series 3",
+        title: "Endless World",
         category: "Adventure",
         categorySlug: "adventure",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/case/2.jpg",
-        link: "/games/racing-series-3",
+        image: "/images/porfolio/EndlessWorld/DroneRacing.png",
+        link: "/#portfolio",
       },
       {
         id: 3,
-        title: "Stargazer II",
+        title: "Flower Shooter",
         category: "FPS",
         categorySlug: "fps",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/case/3.jpg",
-        link: "/games/stargazer-ii",
+        image: "/images/porfolio/FlowerShooter/banner_wide.jpg",
+        link: "/#portfolio",
         featured: true,
       },
       {
         id: 4,
-        title: "Lost Ark",
+        title: "Rove",
         category: "Adventure",
         categorySlug: "adventure",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/case/4.jpg",
-        link: "/games/lost-ark",
+        image: "/images/porfolio/Rove/rove.jpg",
+        link: "/#portfolio",
       },
       {
         id: 5,
-        title: "Jungle Pharaoh",
+        title: "Satan Defeat",
         category: "Platformer",
         categorySlug: "platformer",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/case/5.jpg",
-        link: "/games/jungle-pharaoh",
-      },
-      {
-        id: 6,
-        title: "World War V",
-        category: "RPG",
-        categorySlug: "rpg",
-        excerpt:
-          "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        image: "/images/case/6.jpg",
-        link: "/games/world-war-v",
+        image:
+          "/images/porfolio/SatanDefeat/75b7bf2601a030dd10d351108769c5ae.jpg",
+        link: "/#portfolio",
       },
     ],
     []

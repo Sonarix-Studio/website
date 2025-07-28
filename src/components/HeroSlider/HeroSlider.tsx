@@ -24,8 +24,7 @@ const HeroSlider: React.FC = () => {
       title:
         "We build immersive worlds, smart tools, and XR experiences that drive impact.",
       subtitle: "",
-      backgroundImage:
-        "/images/hero/arun-clarke-UDEb05r0Uy8-unsplash-800x500.jpg",
+      backgroundImage: "/images/banner/Banner1.png",
       ctaText: "Start Your Project",
       ctaLink: "/#contact",
       secondaryCtaText: "Explore Our Work",
@@ -36,8 +35,7 @@ const HeroSlider: React.FC = () => {
       title:
         "Innovative game development with cutting-edge technology and creative storytelling.",
       subtitle: "Game Development",
-      backgroundImage:
-        "/images/hero/hizir-kaya-0q90Mumo-xE-unsplash-1-800x500.jpg",
+      backgroundImage: "/images/banner/Banner3.png",
       ctaText: "View Our Games",
       ctaLink: "/our-games",
       secondaryCtaText: "Learn More",

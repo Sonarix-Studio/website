@@ -28,36 +28,36 @@ const CompanyServices: React.FC = () => {
   const services: Service[] = [
     {
       id: 1,
-      title: "Custom Game Development",
+      title: "CEO",
       description:
-        "Unity 2D/3D, mobile, PC, WebGL - Genres: Casual, Puzzle, Racing, AR, Multiplayer",
+        "Great games aren't just built with code — they're crafted with curiosity, courage, and care.",
       icon: "/icons/expert-advisor.svg",
-      link: "/our-studio",
+      link: "/#company-about",
     },
     {
       id: 2,
-      title: "XR Solutions",
+      title: "CTO",
       description:
-        "Apple Vision Pro, Meta Quest, ARKit/ARCore - Immersive experiences for next-gen platforms",
+        "For me, game development is not just about functionality—it’s about designing robust systems that scale, optimizing every byte, and delivering joyful, fluid player experiences.",
       icon: "/icons/market-research.svg",
-      link: "/our-studio",
+      link: "/#company-services",
     },
     {
       id: 3,
-      title: "Unity Tools & AI Plugins",
+      title: "Technical Leader",
       description:
-        "Unity Editor extensions, in-house automation tools - Streamline your development workflow",
+        "Game development is not only my career path but also my lifelong passion. I constantly seek opportunities to push boundaries, improve my English communication, and explore new technologies.",
       icon: "/icons/customer-insights.svg",
-      link: "/our-studio",
+      link: "/#company-about",
     },
-    {
-      id: 4,
-      title: "Web3 / Blockchain Integration",
-      description:
-        "NFT gaming, on-chain logic - Future-ready blockchain solutions for gaming",
-      icon: "/icons/expert-advisor.svg",
-      link: "/our-studio",
-    },
+    // {
+    //   id: 4,
+    //   title: "Web3 / Blockchain Integration",
+    //   description:
+    //     "NFT gaming, on-chain logic - Future-ready blockchain solutions for gaming",
+    //   icon: "/icons/expert-advisor.svg",
+    //   link: "/#company-about",
+    // },
   ];
 
   return (
@@ -124,7 +124,7 @@ const CompanyServices: React.FC = () => {
                 >
                   <div className={styles.imageContainer}>
                     <Image
-                      src="/images/business-team.jpg"
+                      src="/images/logo/1024x1024.png"
                       alt="Our Team"
                       width={600}
                       height={400}
