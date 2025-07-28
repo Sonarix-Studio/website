@@ -39,46 +39,28 @@ const Footer: React.FC = () => {
     {
       title: "Our Games",
       links: [
-        { title: "Jim & Brimestone", href: "/games/jim-brimestone" },
-        { title: "Jungle Pharaoh", href: "/games/jungle-pharaoh" },
-        { title: "Stargazer II", href: "/games/stargazer-ii" },
-        { title: "Rogue Shooter", href: "/games/rogue-shooter" },
+        { title: "Jim & Brimestone", href: "/#portfolio" },
+        { title: "Jungle Pharaoh", href: "/#portfolio" },
+        { title: "Stargazer II", href: "/#portfolio" },
+        { title: "Rogue Shooter", href: "/#portfolio" },
       ],
     },
     {
       title: "Company",
       links: [
-        { title: "Our Studio", href: "/our-studio" },
-        { title: "Our Games", href: "/our-games" },
-        { title: "Merchandise", href: "/shop" },
-        { title: "Shopping Cart", href: "/cart" },
+        { title: "Our Studio", href: "/#company-about" },
+        { title: "Our Games", href: "/#portfolio" },
       ],
     },
     {
       title: "Contact",
       links: [
-        { title: "Our Location", href: "/contact" },
-        { title: "Latest News", href: "/blog" },
-        { title: "Press Inquiries", href: "/contact" },
-        { title: "General Inquiries", href: "/contact" },
+        { title: "Our Location", href: "/#contact" },
+        { title: "Press Inquiries", href: "/#contact" },
+        { title: "General Inquiries", href: "/#contact" },
       ],
     },
   ];
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubscribing(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribing(false);
-      setEmail("");
-      // You would handle the actual newsletter subscription here
-      console.log("Newsletter subscription:", email);
-    }, 1000);
-  };
 
   return (
     <footer className={styles.footer} id="footer">
@@ -90,7 +72,7 @@ const Footer: React.FC = () => {
             <div className={styles.companySection}>
               <div className={styles.footerLogo}>
                 <Image
-                  src="/images/normal/logo-white.png"
+                  src="/images/logo/no-background-100x100.png"
                   alt="Sonarix Studio"
                   width={120}
                   height={89}

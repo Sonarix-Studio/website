@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             <div className={styles.logo}>
               <Link href="/">
                 <Image
-                  src="/images/normal/logo-white.png"
+                  src="/images/logo/no-background-100x100.png"
                   alt="Sonarix Studio"
                   width={132}
                   height={50}

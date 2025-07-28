@@ -111,7 +111,7 @@ const CompanyServices: React.FC = () => {
                     media.
                   </p>
                   <div className={styles.aboutCta}>
-                    <Link href="/our-studio" className={styles.aboutButton}>
+                    <Link href="/#company-about" className={styles.aboutButton}>
                       Learn More About Us
                       <i className="fas fa-arrow-right"></i>
                     </Link>

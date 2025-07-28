@@ -210,7 +210,7 @@ const LatestReleases: React.FC = () => {
 
         {/* View All Games Link */}
         <div className={styles.viewAllSection}>
-          <Link href="/our-games" className={styles.viewAllButton}>
+          <Link href="/#portfolio" className={styles.viewAllButton}>
             View All Games
             <i className="fas fa-gamepad"></i>
           </Link>
