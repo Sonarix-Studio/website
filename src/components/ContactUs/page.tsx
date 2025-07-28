@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import styles from "./contact.module.css";
+import type {
+  ContactFormData,
+  TelegramAPIResponse,
+  SubmitStatus,
+} from "../../types/telegram";
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     firstName: "",
     lastName: "",
     email: "",
@@ -26,10 +31,58 @@ export default function ContactUs() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
+    type: null,
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/telegram", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data: TelegramAPIResponse = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          company: "",
+          projectType: "",
+          budget: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "Network error. Please check your connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
     <>
@@ -152,8 +205,24 @@ export default function ContactUs() {
                       ></textarea>
                     </div>
 
-                    <button type="submit" className={styles.submitButton}>
-                      Send Message
+                    {submitStatus.type && (
+                      <div
+                        className={`${styles.statusMessage} ${
+                          submitStatus.type === "success"
+                            ? styles.successMessage
+                            : styles.errorMessage
+                        }`}
+                      >
+                        {submitStatus.message}
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      className={styles.submitButton}
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
                       <i className="fas fa-arrow-right"></i>
                     </button>
                   </form>
