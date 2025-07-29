@@ -5,13 +5,15 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #1d1f22;
+  /* background-color: #1d1f22; */
+  background: rgba(118, 75, 162, 0.1);
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header.scrolled {
-  background-color: rgba(29, 31, 34, 0.95);
+  /* background-color: rgba(29, 31, 34, 0.95); */
+  background: rgba(118, 75, 162, 0.5);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
