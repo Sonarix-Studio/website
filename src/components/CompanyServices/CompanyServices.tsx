@@ -9,6 +9,7 @@ import styles from "./CompanyServices.module.css";
 interface Service {
   id: number;
   title: string;
+  name: string;
   description: string;
   icon: string;
   link: string;
@@ -29,26 +30,29 @@ const CompanyServices: React.FC = () => {
     {
       id: 1,
       title: "CEO",
+      name: "Sơn Đình",
       description:
         "Great games aren't just built with code — they're crafted with curiosity, courage, and care.",
       icon: "/images/team/1671728375874.jpeg",
-      link: "/#company-about",
+      link: "https://www.linkedin.com/in/sondinh91/",
     },
     {
       id: 2,
       title: "CTO",
+      name: "Huy Nguyễn",
       description:
         "For me, game development is not just about functionality—it’s about designing robust systems that scale, optimizing every byte, and delivering joyful, fluid player experiences.",
       icon: "/icons/market-research.svg",
-      link: "/#company-services",
+      link: "https://www.linkedin.com/in/huy-nguyen-9643191b6/",
     },
     {
       id: 3,
       title: "Technical Leader",
+      name: "Nam Nguyễn",
       description:
-        "Game development is not only my career path but also my lifelong passion. I constantly seek opportunities to push boundaries, improve my English communication, and explore new technologies.",
+        "Game development is not only my career path but also my lifelong passion. I constantly seek opportunities to push boundaries, improve my English communication, and explore new technologies",
       icon: "/icons/customer-insights.svg",
-      link: "/#company-about",
+      link: "https://www.linkedin.com/in/namnv-nd96/",
     },
     // {
     //   id: 4,
@@ -172,11 +176,16 @@ const CompanyServices: React.FC = () => {
                 </div>
                 <div className={styles.serviceContent}>
                   <h3 className={styles.serviceTitle}>{service.title}</h3>
+                  <h3 className={styles.serviceName}>{service.name}</h3>
                   <p className={styles.serviceDescription}>
                     {service.description}
                   </p>
-                  <Link href={service.link} className={styles.serviceButton}>
-                    Learn More
+                  <Link
+                    target="_blank"
+                    href={service.link}
+                    className={styles.serviceButton}
+                  >
+                    Linkedin
                     <i className="fas fa-arrow-right"></i>
                   </Link>
                 </div>
