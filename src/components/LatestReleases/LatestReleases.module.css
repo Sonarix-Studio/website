@@ -122,6 +122,9 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease forwards;
+  display: flex;
+
+  flex-direction: column;
 }
 
 .gameCard:hover {
@@ -260,6 +263,9 @@
 /* Game Content */
 .gameContent {
   padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .gameTitle {
@@ -283,6 +289,7 @@
   line-height: 1.6;
   margin: 0 0 25px;
   font-size: 14px;
+  flex: 1;
 }
 
 .viewGameButton {
