@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { GAMES } from "../constants";
 
 interface FooterLink {
   title: string;
@@ -38,27 +39,15 @@ const Footer: React.FC = () => {
   const footerSections: FooterSection[] = [
     {
       title: "Our Games",
-      links: [
-        { title: "Jim & Brimestone", href: "/#portfolio" },
-        { title: "Jungle Pharaoh", href: "/#portfolio" },
-        { title: "Stargazer II", href: "/#portfolio" },
-        { title: "Rogue Shooter", href: "/#portfolio" },
-      ],
+      links: GAMES.map((game) => ({ title: game.title, href: game.link })),
     },
     {
       title: "Company",
-      links: [
-        { title: "Our Studio", href: "/#company-about" },
-        { title: "Our Games", href: "/#portfolio" },
-      ],
+      links: [{ title: "Our Studio", href: "/#company-about" }],
     },
     {
       title: "Contact",
-      links: [
-        { title: "Our Location", href: "/#contact" },
-        { title: "Press Inquiries", href: "/#contact" },
-        { title: "General Inquiries", href: "/#contact" },
-      ],
+      links: [{ title: "Our Location", href: "/#contact" }],
     },
   ];
 
