@@ -36,11 +36,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sonarix-studio.com",
+    url: "https://sonarix.studio",
     title: "Sonarix Studio",
     description:
       "Invest in the future of AI-integrated, XR-powered game development..",
     siteName: "Sonarix Studio",
+    images: [
+      {
+        url: "/images/banner/Banner1.png",
+        width: 1200,
+        height: 630,
+        alt: "Sonarix Studio - AI-integrated, XR-powered game development",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -48,6 +56,7 @@ export const metadata: Metadata = {
     description:
       "Invest in the future of AI-integrated, XR-powered game development.",
     creator: "@sonarixstudio",
+    images: ["/images/banner/Banner1.png"],
   },
   robots: {
     index: true,
