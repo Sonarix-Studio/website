@@ -69,8 +69,8 @@ const Footer: React.FC = () => {
                 />
               </div>
               <p className={styles.companyDescription}>
-                We develop indie games with creative gameplay and immersive
-                stories.
+                Invest in the future of AI-integrated, XR-powered game
+                development.
               </p>
               <div className={styles.socialLinks}>
                 {socialLinks.map((social, index) => (

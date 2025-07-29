@@ -21,11 +21,10 @@ const share = Share({
 });
 
 export const metadata: Metadata = {
-  title: "Sonarix Studio - Indie Game Developer",
+  title: "Sonarix Studio",
   description:
-    "We develop indie games with creative gameplay and immersive stories. Discover our latest releases and upcoming projects.",
+    "Invest in the future of AI-integrated, XR-powered game development.",
   keywords: [
-    "indie games",
     "game development",
     "creative gameplay",
     "game studio",
@@ -38,16 +37,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://sonarix-studio.com",
-    title: "Sonarix Studio - Indie Game Developer",
+    title: "Sonarix Studio",
     description:
-      "We develop indie games with creative gameplay and immersive stories.",
+      "Invest in the future of AI-integrated, XR-powered game development..",
     siteName: "Sonarix Studio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sonarix Studio - Indie Game Developer",
+    title: "Sonarix Studio",
     description:
-      "We develop indie games with creative gameplay and immersive stories.",
+      "Invest in the future of AI-integrated, XR-powered game development.",
     creator: "@sonarixstudio",
   },
   robots: {
