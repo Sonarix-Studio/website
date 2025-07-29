@@ -28,13 +28,20 @@ const LatestReleases: React.FC = () => {
     threshold: 0.1,
   });
 
+  const categories = [
+    { name: "All Games", slug: "all" },
+    { name: "Casual", slug: "casual" },
+    { name: "Adventure", slug: "adventure" },
+    { name: "Hyper Casual", slug: "hyper-casual" },
+    { name: "Idle", slug: "idle" },
+  ];
   const games: Game[] = useMemo(
     () => [
       {
         id: 1,
         title: "Demon Ping Pong",
-        category: "FPS",
-        categorySlug: "fps",
+        category: "Casual",
+        categorySlug: "casual",
         excerpt:
           "A casual arcade game where players must defeat a demon baseball master using skillful paddle control. The game features realistic ball physics and complex trajectory patterns based on Bezier curves.",
         images: [
@@ -58,8 +65,8 @@ const LatestReleases: React.FC = () => {
       {
         id: 3,
         title: "Flower Shooter",
-        category: "FPS",
-        categorySlug: "fps",
+        category: "Hyper Casual",
+        categorySlug: "hyper-casual",
         excerpt:
           "A dynamic 2D shooter inspired by classic arcade games, featuring Firebase-integrated leaderboards",
         images: [
@@ -74,24 +81,11 @@ const LatestReleases: React.FC = () => {
         link: "/#portfolio",
         featured: true,
       },
-      // {
-      //   id: 4,
-      //   title: "Rove",
-      //   category: "Adventure",
-      //   categorySlug: "adventure",
-      //   excerpt:
-      //     "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-      //   images: [
-      //     "/images/porfolio/Rove/rove.jpg",
-      //     "/images/porfolio/Rove/O5CgnFFaZoT0d5lLFs7aiL9pZr92-6g93qnx.avif",
-      //   ],
-      //   link: "/#portfolio",
-      // },
       {
         id: 5,
         title: "Satan Defeat",
-        category: "Platformer",
-        categorySlug: "platformer",
+        category: "Adventure",
+        categorySlug: "adventure",
         excerpt:
           "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
         images: [
@@ -104,17 +98,31 @@ const LatestReleases: React.FC = () => {
         ],
         link: "/#portfolio",
       },
+      {
+        id: 6,
+        title: "Tank Loop Assault",
+        category: "Hyper Casual",
+        categorySlug: "hyper-casual",
+        excerpt:
+          "A fast-paced arcade shooter where players defend the center by blasting enemy tanks circling around them. Designed with dynamic visuals and responsive controls, this game showcases our expertise in Unity development, gameplay design, and immersive combat mechanics.",
+        images: ["/images/porfolio/TankLoopAssault/icon.png"],
+        link: "/#portfolio",
+      },
+      {
+        id: 7,
+        title: "Idle Bistro Tycoon",
+        category: "Idle",
+        categorySlug: "idle",
+        excerpt:
+          "Idle Bistro Tycoon is a charming restaurant simulation game where players manage and grow their own bistro empire. From recruiting skilled chefs and efficient staff to upgrading kitchen stations and boosting productivity with special items, every decision counts. Players optimize workflow across multiple floors, unlock new features, and strive to become the ultimate restaurant mogul—all in a fun, idle-friendly experience.",
+        images: [
+          "/images/porfolio/IdleBistroTycoon/Image Sequence_001_0124.jpg",
+        ],
+        link: "/#portfolio",
+      },
     ],
     []
   );
-
-  const categories = [
-    { name: "All Games", slug: "all" },
-    { name: "FPS", slug: "fps" },
-    { name: "Adventure", slug: "adventure" },
-    { name: "Platformer", slug: "platformer" },
-    { name: "RPG", slug: "rpg" },
-  ];
 
   useEffect(() => {
     const filtered =
