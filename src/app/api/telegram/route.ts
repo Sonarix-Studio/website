@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const TELEGRAM_BOT_TOKEN =
       process.env.TELEGRAM_BOT_TOKEN ||
       "8024288405:AAEKXKm87mjvMc5OlABzqcfJ-PUbGQsIIMo";
-    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "5662658101";
+    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "-4938596074";
 
     // Format the message
     const telegramMessage = `
