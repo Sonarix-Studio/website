@@ -36,7 +36,7 @@ const LatestReleases: React.FC = () => {
         category: "FPS",
         categorySlug: "fps",
         excerpt:
-          "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
+          "A casual arcade game where players must defeat a demon baseball master using skillful paddle control. The game features realistic ball physics and complex trajectory patterns based on Bezier curves.",
         images: [
           "/images/porfolio/DemonPingPong/maxresdefault.jpg",
           "/images/porfolio/DemonPingPong/maxresdefault (1).jpg",
@@ -51,7 +51,7 @@ const LatestReleases: React.FC = () => {
         category: "Adventure",
         categorySlug: "adventure",
         excerpt:
-          "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
+          "Inspired by an autonomous world, this game simulates real-world behavior and evolution over time, creating an ever-expanding universe. The game includes climate dynamics, weather systems, and underwater treasures. Various activities, such as mini-games, keep players engaged, including a drone racing game as a core competitive activity.",
         images: ["/images/porfolio/EndlessWorld/DroneRacing.png"],
         link: "/#portfolio",
       },
@@ -61,7 +61,7 @@ const LatestReleases: React.FC = () => {
         category: "FPS",
         categorySlug: "fps",
         excerpt:
-          "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
+          "A dynamic 2D shooter inspired by classic arcade games, featuring Firebase-integrated leaderboards",
         images: [
           "/images/porfolio/FlowerShooter/banner_wide.jpg",
           "/images/porfolio/FlowerShooter/banner.jpg",
@@ -74,19 +74,19 @@ const LatestReleases: React.FC = () => {
         link: "/#portfolio",
         featured: true,
       },
-      {
-        id: 4,
-        title: "Rove",
-        category: "Adventure",
-        categorySlug: "adventure",
-        excerpt:
-          "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
-        images: [
-          "/images/porfolio/Rove/rove.jpg",
-          "/images/porfolio/Rove/O5CgnFFaZoT0d5lLFs7aiL9pZr92-6g93qnx.avif",
-        ],
-        link: "/#portfolio",
-      },
+      // {
+      //   id: 4,
+      //   title: "Rove",
+      //   category: "Adventure",
+      //   categorySlug: "adventure",
+      //   excerpt:
+      //     "Even the all-powerful pointing has no control about the blind texts it is an almost unorthographic life.",
+      //   images: [
+      //     "/images/porfolio/Rove/rove.jpg",
+      //     "/images/porfolio/Rove/O5CgnFFaZoT0d5lLFs7aiL9pZr92-6g93qnx.avif",
+      //   ],
+      //   link: "/#portfolio",
+      // },
       {
         id: 5,
         title: "Satan Defeat",

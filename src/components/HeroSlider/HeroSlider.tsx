@@ -35,7 +35,7 @@ const HeroSlider: React.FC = () => {
       title:
         "Innovative game development with cutting-edge technology and creative storytelling.",
       subtitle: "Game Development",
-      backgroundImage: "/images/banner/Banner3.png",
+      backgroundImage: "/images/banner/Banner2.png",
       ctaText: "View Our Games",
       ctaLink: "/our-games",
       secondaryCtaText: "Learn More",
@@ -46,8 +46,7 @@ const HeroSlider: React.FC = () => {
       title:
         "Transform your ideas into reality with our expert development team.",
       subtitle: "Custom Solutions",
-      backgroundImage:
-        "/images/hero/rodrigo-rodriguez-x7bbQIY6H04-unsplash-800x500.jpg",
+      backgroundImage: "/images/banner/Banner3.png",
       ctaText: "Get Started",
       ctaLink: "/#contact",
       secondaryCtaText: "Our Services",
