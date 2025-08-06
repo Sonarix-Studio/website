@@ -123,7 +123,7 @@ export const GAMES: Game[] = [
     categorySlug: "idle",
     excerpt: "Ninja Panda",
     images: [],
-    videos: ["https://www.youtube.com/watch?v=bfmnabYvHgc"],
+    videos: ["https://www.youtube.com/watch?v=jv8b0piQmG8"],
     link: "/#portfolio",
   },
   {
