@@ -216,6 +216,10 @@
   font-size: 14px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .playButton i {
@@ -607,5 +611,360 @@
 
   .indicator {
     transition: none;
+  }
+}
+
+/* Gallery Overlay Styles */
+.galleryOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.galleryModal {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90vh;
+  height: 90vh;
+  background: #111827;
+  border-radius: 20px;
+  border: 1px solid #374151;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.galleryHeader {
+  padding: 30px 30px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.galleryTitle {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.galleryCategory {
+  color: #60a5fa;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.emblaContainer {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.emblaViewport {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+}
+
+.emblaContainer {
+  display: flex;
+  height: 100%;
+}
+
+.emblaSlide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+}
+
+.mediaContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* max-height: 500px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 12px; */
+  overflow: hidden;
+  background: #000000;
+  /* padding: 24px; */
+}
+
+.galleryImage {
+  border-radius: 15px;
+}
+
+.galleryVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.carouselButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  /* background: #1f2937; */
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #4b5563;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background: #9ca3af;
+  transform: scale(1.2);
+}
+
+.activeDot {
+  background: #60a5fa;
+  transform: scale(1.3);
+}
+
+.galleryFooter {
+  padding: 30px;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  border-top: 1px solid #374151;
+  text-align: center;
+}
+
+.galleryDescription {
+  color: #d1d5db;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 25px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.playGameButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.playGameButton:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .galleryOverlay {
+    padding: 10px;
+  }
+
+  .galleryModal {
+    max-height: 95vh;
+    border-radius: 15px;
+  }
+
+  .galleryHeader {
+    padding: 20px 20px 0;
+  }
+
+  .galleryTitle {
+    font-size: 2rem;
+  }
+
+  .galleryCategory {
+    font-size: 1rem;
+  }
+
+  .emblaSlide {
+    padding: 15px;
+  }
+
+  .mediaContainer {
+    max-height: 300px;
+  }
+
+  .galleryVideo {
+    max-height: 300px;
+  }
+
+  .carouselButton {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .prevButton {
+    left: 10px;
+  }
+
+  .nextButton {
+    right: 10px;
+  }
+
+  .closeButton {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    right: 15px;
+    font-size: 16px;
+  }
+
+  .galleryFooter {
+    padding: 20px;
+  }
+
+  .galleryDescription {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .playGameButton {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryTitle {
+    font-size: 1.5rem;
+  }
+
+  .mediaContainer {
+    max-height: 250px;
+  }
+
+  .galleryVideo {
+    max-height: 250px;
+  }
+
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }

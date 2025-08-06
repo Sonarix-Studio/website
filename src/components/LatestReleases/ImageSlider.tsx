@@ -3,16 +3,19 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./LatestReleases.module.css";
+import { getYouTubeThumbnail } from "@/utils/video";
 
 interface ImageSliderProps {
   images: string[];
+  videos: string[]; // Optional, in case you want to handle videos in the future
   gameTitle: string;
   rotationInterval?: number;
   isHovered?: boolean;
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({
-  images,
+  images = [],
+  videos = [], // Default to empty array if no videos provided
   gameTitle,
   rotationInterval = 1000,
   isHovered = false,
@@ -40,7 +43,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     }
   }, [isHovered, images.length]);
 
-  if (images.length === 0) {
+  if (images.length === 0 && videos.length === 0) {
     return (
       <div className={styles.sliderImage}>
         <div className={styles.noImage}>No Image Available</div>
@@ -48,12 +51,30 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     );
   }
 
-  if (images.length === 1) {
+  if (images.length === 1 && videos.length === 0) {
     return (
       <div className={styles.sliderImage}>
         <Image
           src={images[0]}
           alt={gameTitle}
+          width={800}
+          height={500}
+          className={styles.gameImage}
+        />
+      </div>
+    );
+  }
+
+  if (images.length === 0 && videos.length === 1) {
+    return (
+      <div className={styles.sliderImage}>
+        <img
+          src={
+            getYouTubeThumbnail(videos[0], "maxresdefault") ||
+            getYouTubeThumbnail(videos[0], "hqdefault") ||
+            "/images/video-placeholder.jpg"
+          }
+          alt={`${gameTitle} - Image ${1}`}
           width={800}
           height={500}
           className={styles.gameImage}
@@ -74,6 +95,26 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
           <Image
             src={img}
             alt={`${gameTitle} - Image ${imgIdx + 1}`}
+            width={800}
+            height={500}
+            className={styles.gameImage}
+          />
+        </div>
+      ))}
+      {videos.map((video, videoIdx) => (
+        <div
+          key={videoIdx}
+          className={`${styles.sliderImage} ${
+            currentImageIndex === videoIdx ? styles.active : styles.inactive
+          }`}
+        >
+          <img
+            src={
+              getYouTubeThumbnail(video, "maxresdefault") ||
+              getYouTubeThumbnail(video, "hqdefault") ||
+              "/images/video-placeholder.jpg"
+            }
+            alt={`${gameTitle} - Image ${videoIdx + 1}`}
             width={800}
             height={500}
             className={styles.gameImage}

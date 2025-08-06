@@ -42,7 +42,7 @@ const CompanyServices: React.FC = () => {
       name: "Huy Nguyễn",
       description:
         "For me, game development is not just about functionality—it’s about designing robust systems that scale, optimizing every byte, and delivering joyful, fluid player experiences.",
-      icon: "/icons/market-research.svg",
+      icon: "/images/team/photo_2025-08-06_21-48-51.jpg",
       link: "https://www.linkedin.com/in/huy-nguyen-9643191b6/",
     },
     {
@@ -51,7 +51,7 @@ const CompanyServices: React.FC = () => {
       name: "Nam Nguyễn",
       description:
         "Game development is not only my career path but also my lifelong passion. I constantly seek opportunities to push boundaries, improve my English communication, and explore new technologies",
-      icon: "/icons/customer-insights.svg",
+      icon: "/images/team/1641003045956.jpeg",
       link: "https://www.linkedin.com/in/namnv-nd96/",
     },
     // {
