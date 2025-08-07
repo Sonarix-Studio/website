@@ -33,7 +33,7 @@ const CompanyServices: React.FC = () => {
       name: "Sơn Đình",
       description:
         "Great games aren't just built with code — they're crafted with curiosity, courage, and care.",
-      icon: "/images/team/1671728375874.jpeg",
+      icon: "/images/team/avatar.jpg",
       link: "https://www.linkedin.com/in/sondinh91/",
     },
     {
