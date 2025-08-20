@@ -75,8 +75,8 @@ const CompanyServices: React.FC = () => {
 - Led NINA - A Full feature audio - visual web app tool (Subtitling, dubbing, audio - art ) + built in project management + integrated IMDB APIs to generate project template.
    + NINA project was built with multiple framework and tools Django, FastAPI, Celery, PostgreSQL, MongoDb, Redis, ...
 - Strong foundation in AI-driven applications (NLP chatbot, recommendation system,  computer vision, ...)`,
-      icon: "/images/logo/100x100.png",
-      link: "",
+      icon: "/images/team/1748586175400.jpeg",
+      link: "https://www.linkedin.com/in/long-nguyen-8098381b2/",
     },
   ];
 
