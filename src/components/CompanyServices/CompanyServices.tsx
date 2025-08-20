@@ -63,6 +63,21 @@ const CompanyServices: React.FC = () => {
       icon: "/images/team/1540912582887.jpeg",
       link: "https://www.linkedin.com/in/tr%C3%ACnh-nguy%E1%BB%85n-a3202b97/",
     },
+    {
+      id: 5,
+      title: "Senior Engineer",
+      name: "Long Nguyễn",
+      description: `- Over 5 years of expertise in Python backend development and DevOps, specializing in scalable APIs, CI/CD automation, and cloud infrastructure across AWS, GCP, DigitalOcean, and Unity Cloud.
+- Backend Engineer for Pawz - Apple Vision Pro
+   + Delivered robust backend systems for VisionOS, including catalog management, in-app purchases, notification pipelines
+   + Data engineering: analytics integrations with Unity Analytics, Apple App Analytics, and Snowflake.
+   + Designed and optimized CI/CD workflows for cross-platform environments, enabling seamless VisionOS asset delivery without version updates.
+- Led NINA - A Full feature audio - visual web app tool (Subtitling, dubbing, audio - art ) + built in project management + integrated IMDB APIs to generate project template.
+   + NINA project was built with multiple framework and tools Django, FastAPI, Celery, PostgreSQL, MongoDb, Redis, ...
+- Strong foundation in AI-driven applications (NLP chatbot, recommendation system,  computer vision, ...)`,
+      icon: "/images/logo/100x100.png",
+      link: "",
+    },
   ];
 
   return (
