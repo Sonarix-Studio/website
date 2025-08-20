@@ -54,14 +54,15 @@ const CompanyServices: React.FC = () => {
       icon: "/images/team/1641003045956.jpeg",
       link: "https://www.linkedin.com/in/namnv-nd96/",
     },
-    // {
-    //   id: 4,
-    //   title: "Web3 / Blockchain Integration",
-    //   description:
-    //     "NFT gaming, on-chain logic - Future-ready blockchain solutions for gaming",
-    //   icon: "/icons/expert-advisor.svg",
-    //   link: "/#company-about",
-    // },
+    {
+      id: 4,
+      title: "Senior Engineer",
+      name: "Trinh Nguyen",
+      description:
+        "Fullstack engineer specializing in web development, mobile applications, blockchain, Web3, realtime systems, game development, and UX/UI design.",
+      icon: "/images/team/1540912582887.jpeg",
+      link: "https://www.linkedin.com/in/tr%C3%ACnh-nguy%E1%BB%85n-a3202b97/",
+    },
   ];
 
   return (
