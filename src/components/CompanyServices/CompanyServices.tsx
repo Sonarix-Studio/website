@@ -144,7 +144,7 @@ const CompanyServices: React.FC = () => {
                 >
                   <div className={styles.imageContainer}>
                     <Image
-                      src="/images/logo/1024x1024.png"
+                      src="/images/logo/1024x1024-v2.png"
                       alt="Our Team"
                       width={600}
                       height={400}

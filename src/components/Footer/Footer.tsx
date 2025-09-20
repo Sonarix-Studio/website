@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
             <div className={styles.companySection}>
               <div className={styles.footerLogo}>
                 <Image
-                  src="/images/logo/no-background-100x100.png"
+                  src="/images/logo/no-background-100x100-v2.png"
                   alt="Sonarix Studio"
                   width={120}
                   height={89}
