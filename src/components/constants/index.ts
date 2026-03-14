@@ -15,6 +15,7 @@ export interface Game {
   images: string[];
   videos: string[];
   link: string;
+  playUrl?: string;
   featured?: boolean;
 }
 
@@ -101,7 +102,7 @@ export const GAMES: Game[] = [
     category: "Idle",
     categorySlug: "idle",
     excerpt:
-      "Idle Bistro Tycoon is a charming restaurant simulation game where players manage and grow their own bistro empire. From recruiting skilled chefs and efficient staff to upgrading kitchen stations and boosting productivity with special items, every decision counts. Players optimize workflow across multiple floors, unlock new features, and strive to become the ultimate restaurant mogul—all in a fun, idle-friendly experience.",
+      " Idle Bistro Tycoon is a charming restaurant simulation game where players manage and grow their own bistro empire. From recruiting skilled chefs and efficient staff to upgrading kitchen stations and boosting productivity with special items, every decision counts. Players optimize workflow across multiple floors, unlock new features, and strive to become the ultimate restaurant mogul—all in a fun, idle-friendly experience.",
     images: ["/images/porfolio/IdleBistroTycoon/Image Sequence_001_0124.jpg"],
     videos: [],
     link: "/#portfolio",
@@ -135,5 +136,18 @@ export const GAMES: Game[] = [
     images: [],
     videos: ["https://www.youtube.com/watch?v=bfmnabYvHgc"],
     link: "/#portfolio",
+  },
+  {
+    id: 11,
+    title: "Bow of God",
+    category: "Casual",
+    categorySlug: "casual",
+    excerpt:
+      "Bow of God is an action defense game that blends claw machine mechanics with strategic combat. Use a magical claw to grab different arrows and defend your castle from incoming monsters. Choose between Normal, Fire, and Ice arrows, each with unique effects to control the battlefield. As you progress, unlock powerful upgrades and build your own combat style through a roguelike progression system inspired by games like Zombie Waves. Simple to play but challenging to master, Bow of God tests your aim, strategy, and timing.",
+    images: ["/images/porfolio/BowOfGod/BowOfGod.png"],
+    videos: [],
+    link: "/#portfolio",
+    playUrl:
+      "https://playground.lunalabs.io/preview/324008/431471/a7d262fa98860ab84e8f65edc5b648a0d717d9d9bc5f5b52a10f768eceaa2a57",
   },
 ];

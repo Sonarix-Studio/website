@@ -55,6 +55,62 @@ const GalleryViewedContent = ({ game }: { game: Game }) => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
+  if (game.playUrl) {
+    const canEmbedPlayUrl = game.playUrl.startsWith("/");
+
+    return (
+      <div
+        className={styles.galleryOverlay}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            window.dispatchEvent(new CustomEvent("closeGallery"));
+          }
+        }}
+      >
+        <div className={styles.galleryModal}>
+          <button
+            className={styles.closeButton}
+            onClick={() =>
+              window.dispatchEvent(new CustomEvent("closeGallery"))
+            }
+            aria-label="Close popup"
+          >
+            <i className="fas fa-times"></i>
+          </button>
+          {canEmbedPlayUrl ? (
+            <div className={styles.mediaContainer}>
+              <iframe
+                className={styles.galleryVideo}
+                src={game.playUrl}
+                title={`${game.title} - Play Now`}
+                frameBorder="0"
+                allow="autoplay; fullscreen; gamepad; xr-spatial-tracking"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          ) : (
+            <div className={styles.externalGameFallback}>
+              <h3 className={styles.externalGameTitle}>{game.title}</h3>
+              <p className={styles.externalGameText}>
+                This game host blocks in-site embedding. Open it in a new tab to
+                play.
+              </p>
+              <a
+                href={game.playUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.externalGameButton}
+              >
+                Open Game in New Tab
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   if (!game || mediaItems.length === 0) return null;
 
   return (
@@ -197,10 +253,11 @@ const LatestReleases: React.FC = () => {
   }, [galleryViewed]);
 
   useEffect(() => {
+    const sortedGames = [...GAMES].sort((a, b) => b.id - a.id);
     const filtered =
       selectedCategory === "all"
-        ? GAMES
-        : GAMES.filter((game) => game.categorySlug === selectedCategory);
+        ? sortedGames
+        : sortedGames.filter((game) => game.categorySlug === selectedCategory);
     setFilteredGames(filtered);
   }, [selectedCategory]);
 

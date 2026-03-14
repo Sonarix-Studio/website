@@ -872,6 +872,56 @@
   text-decoration: none;
 }
 
+.externalGameFallback {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+}
+
+.externalGameTitle {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.externalGameText {
+  margin: 0;
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.externalGameButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5be592 0%, #00da97 100%);
+  color: #2b734a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.externalGameButton:hover {
+  color: #2b734a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(91, 229, 146, 0.3);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .galleryOverlay {
