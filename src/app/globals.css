@@ -40,9 +40,9 @@
   --border-accent: rgba(91, 229, 146, 0.3);
 
   /* Fonts */
-  --font-primary: var(--font-kodchasan);
-  --font-secondary: var(--font-mina);
-  --font-accent: var(--font-share);
+  --font-primary: var(--font-space-grotesk);
+  --font-secondary: var(--font-inter);
+  --font-accent: var(--font-space-grotesk);
 
   /* Spacing */
   --container-max-width: 1200px;
@@ -74,7 +74,7 @@ html {
 }
 
 body {
-  font-family: var(--font-primary), sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   background: var(--bg-gradient);
   background-attachment: fixed;
   background-size: cover;

@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-import { Kodchasan, Mina, Share } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const kodchasan = Kodchasan({
-  weight: ["400", "700"],
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-kodchasan",
+  variable: "--font-inter",
 });
 
-const mina = Mina({
-  weight: ["400", "700"],
+const spaceGrotesk = Space_Grotesk({
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
-  variable: "--font-mina",
-});
-
-const share = Share({
-  weight: ["700"],
-  subsets: ["latin"],
-  variable: "--font-share",
+  variable: "--font-space-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -87,10 +80,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${kodchasan.variable} ${mina.variable} ${share.variable}`}
-      >
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body>
         <div className="gaming-layout">{children}</div>
       </body>
     </html>
