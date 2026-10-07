@@ -42,7 +42,7 @@ export const GAMES: Game[] = [
     category: "Adventure",
     categorySlug: "adventure",
     excerpt:
-      "Inspired by an autonomous world, this game simulates real-world behavior and evolution over time, creating an ever-expanding universe. The game includes climate dynamics, weather systems, and underwater treasures. Various activities, such as mini-games, keep players engaged, including a drone racing game as a core competitive activity.",
+      "An ever-expanding autonomous world that evolves over time, with dynamic climate, weather systems and underwater treasures. Mini-games keep players engaged, led by competitive drone racing.",
     images: ["/images/porfolio/EndlessWorld/DroneRacing.png"],
     videos: [],
     link: "/#portfolio",
@@ -102,7 +102,7 @@ export const GAMES: Game[] = [
     category: "Idle",
     categorySlug: "idle",
     excerpt:
-      " Idle Bistro Tycoon is a charming restaurant simulation game where players manage and grow their own bistro empire. From recruiting skilled chefs and efficient staff to upgrading kitchen stations and boosting productivity with special items, every decision counts. Players optimize workflow across multiple floors, unlock new features, and strive to become the ultimate restaurant mogul—all in a fun, idle-friendly experience.",
+      "A charming restaurant sim where you grow your own bistro empire. Hire chefs and staff, upgrade kitchen stations, optimize workflow across multiple floors and become the ultimate restaurant mogul.",
     images: ["/images/porfolio/IdleBistroTycoon/Image Sequence_001_0124.jpg"],
     videos: [],
     link: "/#portfolio",
@@ -112,7 +112,8 @@ export const GAMES: Game[] = [
     title: "Idle Food Inc: Itaewon",
     category: "Idle",
     categorySlug: "idle",
-    excerpt: "Idle Food Inc: Itaewon",
+    excerpt:
+      "Build a food empire on the neon streets of Itaewon. Open new restaurants, level up kitchens, hire waiters and speed up deliveries to keep profits flowing, even while you're away.",
     images: [],
     videos: ["https://www.youtube.com/watch?v=R2NHFhWTs0c"],
     link: "/#portfolio",
@@ -122,7 +123,8 @@ export const GAMES: Game[] = [
     title: "Ninja Panda",
     category: "Idle",
     categorySlug: "idle",
-    excerpt: "Ninja Panda",
+    excerpt:
+      "Guide a nimble ninja panda through dungeon floors packed with enemies. Collect angelic blessings like speed and healing boosts, and combine them into a build strong enough to clear every stage.",
     images: [],
     videos: ["https://www.youtube.com/watch?v=jv8b0piQmG8"],
     link: "/#portfolio",
@@ -132,7 +134,8 @@ export const GAMES: Game[] = [
     title: "We are zombie",
     category: "Casual",
     categorySlug: "casual",
-    excerpt: "We are zombie",
+    excerpt:
+      "Raise a zombie army and push across the battlefield. Spawn undead units, manage your resources and evolve your horde into stronger forms to overrun the enemy base before it overruns yours.",
     images: [],
     videos: ["https://www.youtube.com/watch?v=bfmnabYvHgc"],
     link: "/#portfolio",
@@ -143,7 +146,7 @@ export const GAMES: Game[] = [
     category: "Casual",
     categorySlug: "casual",
     excerpt:
-      "Bow of God is an action defense game that blends claw machine mechanics with strategic combat. Use a magical claw to grab different arrows and defend your castle from incoming monsters. Choose between Normal, Fire, and Ice arrows, each with unique effects to control the battlefield. As you progress, unlock powerful upgrades and build your own combat style through a roguelike progression system inspired by games like Zombie Waves. Simple to play but challenging to master, Bow of God tests your aim, strategy, and timing.",
+      "An action defense game that blends claw machine mechanics with strategic combat. Grab Normal, Fire and Ice arrows with a magical claw to defend your castle, then build your style through roguelike upgrades.",
     images: ["/images/porfolio/BowOfGod/BowOfGod.png"],
     videos: [],
     link: "/#portfolio",
